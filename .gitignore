@@ -1,0 +1,14 @@
+# 1. Ignore everything by default
+*
+
+# 2. Allow directories to allow Git scan inside subdirectories.
+!*/
+
+# 3. Whitelist c source and header files.
+!*.c
+!*.h
+
+# 4. Common project and build files.
+!.gitignore
+!README.md
+!Makeile
