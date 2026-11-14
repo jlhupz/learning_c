@@ -14,8 +14,9 @@ int main()
 
     printf("Fahrenheit    Celsius\n");
 
-    for (fahrenheit = 300; fahrenheit >= 0; fahrenheit = fahrenheit - 20)
+    for (fahrenheit = 300; fahrenheit >= 0; fahrenheit = fahrenheit - 20) {
         printf("%10d %10.1f\n", fahrenheit, (5.0/9.0) * (fahrenheit - 32));
+    }
 
     return 0;
 }
