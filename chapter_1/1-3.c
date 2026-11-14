@@ -17,7 +17,7 @@ int main()
 
     printf("FAHRENHEIT        CELSIUS\n\n");
 
-    for(fahrenheit = LOWER; fahrenheit <= UPPER; fahrenheit = fahrenheit + STEP) {
+    for (fahrenheit = LOWER; fahrenheit <= UPPER; fahrenheit = fahrenheit + STEP) {
         celsius = (5.0/9.0) * (fahrenheit - 32.0); 
         printf("%9d %15.1f\n", fahrenheit, celsius);
     }
