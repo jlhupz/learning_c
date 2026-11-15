@@ -12,3 +12,7 @@
 !.gitignore
 !README.md
 !Makeile
+
+# 5. Reference materials 
+!*.epub
+!*.pdf
