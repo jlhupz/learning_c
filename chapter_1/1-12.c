@@ -1,54 +1,31 @@
 /*
- * Exercise 1-12. Program that prints its input one word per line.
-*/
-
-#include <stdio.h>
-
-int main()
-{
-    int c;
-
-    while ((c = getchar()) != EOF) {
-        if (c == ' ' || c == '\t') {
-            putchar('\n');
-
-            while ((c = getchar()) == ' ' || c == '\t') {
-                // do nothing
-            }
-
-            putchar(c);
-        } else {
-            putchar(c);
-        }
-    }
-
-    return 0;
-}
-
-/*
- * Old version
- *
-
+ * Author: Jefferson Lupac
+ * Date: 15 November, 2026
+ * The C programming language chapter 1 exercise 1-12.  Write a program that
+ * prints its input one word per line.
+ */
 
 #include <stdio.h>
 #define IN 1
 #define OUT 0
 
-int main() 
+int main()
 {
-    int state = IN;
-    char c;
+    int c, state;
+
+    state = OUT;
 
     while ((c = getchar()) != EOF) {
-        if (c == ' ' || c == '\t')
+        if (c == ' ' || c == '\n' || c == '\t') {
+            if (state == IN) {
+                putchar('\n');
+            }
             state = OUT;
-        else if (state == OUT) {
-            putchar('\n');
+        } else {
+            putchar(c);
             state = IN;
         }
-        putchar(c);
     }
+
     return 0;
 }
-*/
-
