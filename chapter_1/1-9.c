@@ -10,19 +10,18 @@
 
 int main()
 {
-    int c;
+    int c, prev_c;
+    
+    prev_c = 0;
 
     while ((c = getchar()) != EOF) {
-        if (c == ' ') {
-            putchar(c);
-
-            while ((c = getchar()) == ' ') {
-                ;
-                /* Do nothing */
-            }
+        if (c == '\t') {
+            c = ' ';
         }
-
-        putchar(c);
+        if (prev_c != ' ' || c != ' ' ) {
+            putchar(c);
+        }
+        prev_c = c; 
     }
 
     return 0;
