@@ -8,28 +8,23 @@
  * */
 
 #include <stdio.h>
-#define IN 1
-#define OUT 0
 #define MAX_WORD_LENGTH 28
 
-int main() {
-    int c, state = OUT, char_counts = 0, max_frequency = 0;
+int main()
+{
+    int c, char_counts = 0, max_frequency = 0;
     int word_length_counts[MAX_WORD_LENGTH + 1] = {0};
 
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == '\n' || c == '\t') {
-            if (state == IN) {
-                if (char_counts > MAX_WORD_LENGTH) {
-                    ++word_length_counts[0];
-                } else {
-                    ++word_length_counts[char_counts];
-                }
-                char_counts = 0;
+            if (char_counts > MAX_WORD_LENGTH) {
+                ++word_length_counts[0];
+            } else if (char_counts) {
+                ++word_length_counts[char_counts];
             }
-            state = OUT;
+            char_counts = 0;
         } else {
             ++char_counts;
-            state = IN;
         }
     }
 
@@ -51,7 +46,7 @@ int main() {
     /* print vertical histogram */
     while (max_frequency > 0) {
         printf("%3d\t", max_frequency);
-        for (int i = 0; i < MAX_WORD_LENGTH; ++i) {
+        for (int i = 0; i <= MAX_WORD_LENGTH; ++i) {
             if (word_length_counts[i] >= max_frequency) {
                 printf("### ");
             } else {
@@ -65,7 +60,7 @@ int main() {
     printf("   \t");
 
     for (int i = 0; i <= MAX_WORD_LENGTH; ++i) {
-        printf(" %d  ", i);
+        printf("%3d ", i);
     }
 
     /* print horizontal historgram */

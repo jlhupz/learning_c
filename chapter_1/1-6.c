@@ -17,7 +17,7 @@ int main()
     }
 
     printf("%d\n", c);
-    /* getchar was EOF, condition evaluated as false and recorded in variable 
+    /* getchar was EOF, condition evaluated as false and recorded in variable
     c, confirmed it with printf */
 
     return 0;

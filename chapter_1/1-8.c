@@ -14,11 +14,9 @@ int main()
     while ((c = getchar()) != EOF) {
         if (c == '\n') {
             ++lines;
-        }
-        else if (c == '\t') {
+        } else if (c == '\t') {
             ++tabs;
-        } 
-        else if (c == ' ') {
+        } else if (c == ' ') {
             ++blanks;
         }
     }
