@@ -11,23 +11,24 @@
 #define LOWER 0
 #define STEP 20
 
-int main() {
-  /* variable declaration */
-  float celsius, fahrenheit;
+int main()
+{
+    /* variable declaration */
+    float celsius, fahrenheit;
 
-  /* Calculation and print the table */
-  for (fahrenheit = LOWER; fahrenheit <= UPPER; fahrenheit += STEP) {
-    // celsius = (5.0/9.0) * (fahrenheit - 32);
-    printf("%.2f\t%.2f\n", fahrenheit, to_celsius(fahrenheit));
-  }
+    /* Calculation and print the table */
+    for (fahrenheit = LOWER; fahrenheit <= UPPER; fahrenheit += STEP) {
+        // celsius = (5.0/9.0) * (fahrenheit - 32);
+        printf("%.2f\t%.2f\n", fahrenheit, to_celsius(fahrenheit));
+    }
 
-  printf("\n\n");
+    printf("\n\n");
 
-  while (fahrenheit >= LOWER) {
-    printf("%.2f\t%.2f\n", to_fahrenheit(to_celsius(fahrenheit)),
-           to_celsius(fahrenheit));
-    fahrenheit -= STEP;
-  }
+    while (fahrenheit >= LOWER) {
+        printf("%.2f\t%.2f\n", to_fahrenheit(to_celsius(fahrenheit)),
+               to_celsius(fahrenheit));
+        fahrenheit -= STEP;
+    }
 
-  return 0;
+    return 0;
 }
