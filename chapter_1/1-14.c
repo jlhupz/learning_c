@@ -38,9 +38,9 @@ int main()
         printf("%3d ", highest_freq);
         for (int i = 0; i <= MAX_CHARS; ++i) {
             if (char_counts[i] >= highest_freq) {
-                printf("* ");
+                printf(" * ");
             } else {
-                printf("  ");
+                printf("   ");
             }
         }
         putchar('\n');
@@ -51,11 +51,11 @@ int main()
 
     for (int i = 0; i <= MAX_CHARS; ++i) {
         if (i >= 0 && i <= 9) {
-            printf("%c ", i + '0');
+            printf(" %c ", i + '0');
         } else if (i >= 10 && i <= 35) {
-            printf("%c ", i - 10 + 'A');
+            printf(" %c ", i - 10 + 'A');
         } else {
-            printf("Other");
+            printf(" !?");
         }
     }
 
