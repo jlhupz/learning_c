@@ -25,7 +25,7 @@ int main()
         }
     }
 
-    /* find the highest character counts */
+    // Find the highest character counts.
     int highest_freq = 0;
 
     for (int i = 0; i <= MAX_CHARS; ++i) {
@@ -33,7 +33,7 @@ int main()
             highest_freq = char_counts[i];
         }
     }
-    /* print vertical histogram */
+    // Print vertical histogram.
     while (highest_freq > 0) {
         printf("%3d ", highest_freq);
         for (int i = 0; i <= MAX_CHARS; ++i) {
@@ -59,7 +59,7 @@ int main()
         }
     }
 
-    /* print horizontal historgram */
+    // Print horizontal historgram.
     /*
     for (int i = 0; i <= MAX_CHARS; ++i) {
         if (i >= 0 && i <= 9) {

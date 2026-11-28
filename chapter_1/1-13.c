@@ -28,7 +28,7 @@ int main()
         }
     }
 
-    /* Count the word if the input ends EOF before any trailing whitespace */
+    // Count the word if the input ends EOF before any trailing whitespace.
     if (char_counts) {
         if (char_counts > MAX_WORD_LENGTH) {
             ++word_length_counts[0];
@@ -36,14 +36,14 @@ int main()
             ++word_length_counts[char_counts];
         }
     }
-    /* Find the most frequent word length */
+    // Find the most frequent word length.
     for (int i = 0; i <= MAX_WORD_LENGTH; ++i) {
         if (word_length_counts[i] > max_frequency) {
             max_frequency = word_length_counts[i];
         }
     }
 
-    /* print vertical histogram */
+    // Print vertical histogram.
     while (max_frequency > 0) {
         printf("%3d\t", max_frequency);
         for (int i = 0; i <= MAX_WORD_LENGTH; ++i) {
@@ -63,7 +63,7 @@ int main()
         printf("%3d ", i);
     }
 
-    /* print horizontal historgram */
+    // Print horizontal historgram.
     /*
     for (int i = 0; i <= MAX_WORD_LENGTH; ++i) {
         if (word_length_counts[i] != 0) {

@@ -9,7 +9,7 @@
 int main()
 {
     printf("%d\n", EOF);
-    /* EOF is -1 */
+    // EOF is -1.
 
     return 0;
 }
